@@ -13,6 +13,9 @@
 		8E28553B291EAFDC00B257FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E285539291EAFDC00B257FE /* Main.storyboard */; };
 		8E28553D291EAFDD00B257FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E28553C291EAFDD00B257FE /* Assets.xcassets */; };
 		8E285540291EAFDD00B257FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E28553E291EAFDD00B257FE /* LaunchScreen.storyboard */; };
+		8E285549291ED81700B257FE /* AstronomyPicture .swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E285548291ED81700B257FE /* AstronomyPicture .swift */; };
+		8E63E4F9292A71BA0028899C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E63E4F8292A71BA0028899C /* NetworkManager.swift */; };
+		8E63E4FB292A779D0028899C /* HdImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E63E4FA292A779D0028899C /* HdImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		8E28553C291EAFDD00B257FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E28553F291EAFDD00B257FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E285541291EAFDD00B257FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E285548291ED81700B257FE /* AstronomyPicture .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AstronomyPicture .swift"; sourceTree = "<group>"; };
+		8E63E4F8292A71BA0028899C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8E63E4FA292A779D0028899C /* HdImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HdImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +62,12 @@
 		8E285532291EAFDC00B257FE /* AstronomyPictureOfTheDay */ = {
 			isa = PBXGroup;
 			children = (
+				8E285548291ED81700B257FE /* AstronomyPicture .swift */,
 				8E285533291EAFDC00B257FE /* AppDelegate.swift */,
 				8E285535291EAFDC00B257FE /* SceneDelegate.swift */,
 				8E285537291EAFDC00B257FE /* ViewController.swift */,
+				8E63E4FA292A779D0028899C /* HdImageViewController.swift */,
+				8E63E4F8292A71BA0028899C /* NetworkManager.swift */,
 				8E285539291EAFDC00B257FE /* Main.storyboard */,
 				8E28553C291EAFDD00B257FE /* Assets.xcassets */,
 				8E28553E291EAFDD00B257FE /* LaunchScreen.storyboard */,
@@ -140,6 +149,9 @@
 			files = (
 				8E285538291EAFDC00B257FE /* ViewController.swift in Sources */,
 				8E285534291EAFDC00B257FE /* AppDelegate.swift in Sources */,
+				8E63E4FB292A779D0028899C /* HdImageViewController.swift in Sources */,
+				8E63E4F9292A71BA0028899C /* NetworkManager.swift in Sources */,
+				8E285549291ED81700B257FE /* AstronomyPicture .swift in Sources */,
 				8E285536291EAFDC00B257FE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,9 +314,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = hiirari.AstronomyPictureOfTheDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -330,9 +345,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = hiirari.AstronomyPictureOfTheDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
