@@ -131,7 +131,7 @@
                             <constraint firstItem="Vm0-AD-vIS" firstAttribute="centerX" secondItem="teV-q2-SoV" secondAttribute="centerX" id="rrl-px-5aL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" style="editor" id="HV3-n9-JIP">
+                    <navigationItem key="navigationItem" id="HV3-n9-JIP">
                         <barButtonItem key="backBarButtonItem" title="dd" id="Wmv-3D-LpX"/>
                     </navigationItem>
                     <connections>
@@ -162,6 +162,7 @@
             <point key="canvasLocation" x="84.112149532710276" y="-34.98920086393089"/>
         </scene>
     </scenes>
+    <color key="tintColor" systemColor="systemPurpleColor"/>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
