@@ -10,16 +10,6 @@ struct AstronomyPicture: Decodable {
     let copyright: String?
     let explanation: String
     let title: String
-    let url: String?
-    let hdurl: String?
-        
-//    enum CodingKeys: String, CodingKey {
-//        case image = "url"
-//        case hdImage = "hdurl"
-//        case date = "date"
-//        case copyright = "copyright"
-//        case explanation = "explanation"
-//        case title = "title"
-//
-//    }
+    let url: String
+    let hdurl: String
 }

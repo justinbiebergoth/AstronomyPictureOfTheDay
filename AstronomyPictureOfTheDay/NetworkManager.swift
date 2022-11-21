@@ -21,9 +21,7 @@ enum Link: String {
 class NetworkManager {
     static let shared = NetworkManager()
     
-    private init() {
-        
-    }
+    private init() {}
     
     func fetchImage(from url: String?, completion: @escaping(Result<Data, NetworkError>) -> Void) {
         guard let url = URL(string: url ?? "") else {

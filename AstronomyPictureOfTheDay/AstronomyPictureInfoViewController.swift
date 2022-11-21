@@ -8,7 +8,7 @@
 import UIKit
 
 
-class ViewController: UIViewController {
+class AstronomyPictureInfoViewController: UIViewController {
     
     private var AstronomyPictureInfo: AstronomyPicture!
     
@@ -28,7 +28,17 @@ class ViewController: UIViewController {
     }
     
 }
-extension ViewController {
+extension AstronomyPictureInfoViewController {
+    private func fetchImage() {
+        NetworkManager.shared.fetchImage(from: AstronomyPictureInfo?.url) { [weak self] result in
+            switch result {
+            case .success(let imageData):
+                self?.astronomyPictureImageView.image = UIImage(data: imageData)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
     private func fetchInfo() {
         NetworkManager.shared.fetch(AstronomyPicture.self, from: Link.astronomyPictureInfoURL.rawValue) { [weak self] result in
             switch result{
@@ -46,15 +56,4 @@ extension ViewController {
         
     }
     
-    private func fetchImage() {
-        NetworkManager.shared.fetchImage(from: AstronomyPictureInfo?.url) { [weak self] result in
-            switch result {
-            case .success(let imageData):
-                self?.astronomyPictureImageView.image = UIImage(data: imageData)
-                print(imageData)
-            case .failure(let error):
-                print(error)
-            }
-        }
-    }
 }

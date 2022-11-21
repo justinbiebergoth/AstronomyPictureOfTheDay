@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8E285534291EAFDC00B257FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E285533291EAFDC00B257FE /* AppDelegate.swift */; };
 		8E285536291EAFDC00B257FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E285535291EAFDC00B257FE /* SceneDelegate.swift */; };
-		8E285538291EAFDC00B257FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E285537291EAFDC00B257FE /* ViewController.swift */; };
+		8E285538291EAFDC00B257FE /* AstronomyPictureInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E285537291EAFDC00B257FE /* AstronomyPictureInfoViewController.swift */; };
 		8E28553B291EAFDC00B257FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E285539291EAFDC00B257FE /* Main.storyboard */; };
 		8E28553D291EAFDD00B257FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E28553C291EAFDD00B257FE /* Assets.xcassets */; };
 		8E285540291EAFDD00B257FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E28553E291EAFDD00B257FE /* LaunchScreen.storyboard */; };
@@ -22,7 +22,7 @@
 		8E285530291EAFDC00B257FE /* AstronomyPictureOfTheDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AstronomyPictureOfTheDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E285533291EAFDC00B257FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E285535291EAFDC00B257FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8E285537291EAFDC00B257FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8E285537291EAFDC00B257FE /* AstronomyPictureInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPictureInfoViewController.swift; sourceTree = "<group>"; };
 		8E28553A291EAFDC00B257FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E28553C291EAFDD00B257FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E28553F291EAFDD00B257FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 				8E285548291ED81700B257FE /* AstronomyPicture .swift */,
 				8E285533291EAFDC00B257FE /* AppDelegate.swift */,
 				8E285535291EAFDC00B257FE /* SceneDelegate.swift */,
-				8E285537291EAFDC00B257FE /* ViewController.swift */,
+				8E285537291EAFDC00B257FE /* AstronomyPictureInfoViewController.swift */,
 				8E63E4FA292A779D0028899C /* HdImageViewController.swift */,
 				8E63E4F8292A71BA0028899C /* NetworkManager.swift */,
 				8E285539291EAFDC00B257FE /* Main.storyboard */,
@@ -147,7 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E285538291EAFDC00B257FE /* ViewController.swift in Sources */,
+				8E285538291EAFDC00B257FE /* AstronomyPictureInfoViewController.swift in Sources */,
 				8E285534291EAFDC00B257FE /* AppDelegate.swift in Sources */,
 				8E63E4FB292A779D0028899C /* HdImageViewController.swift in Sources */,
 				8E63E4F9292A71BA0028899C /* NetworkManager.swift in Sources */,
