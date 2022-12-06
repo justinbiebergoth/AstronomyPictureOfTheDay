@@ -19,7 +19,7 @@ class HdImageViewController: UIViewController {
         fetchImage()
     }
     private func fetchImage() {
-        NetworkManager.shared.fetchImage(from: Link.hdImageURL.rawValue) { [weak self] result in
+        NetworkManager.shared.fetchImage(from: Link.hdImageURL.rawValue ) { [weak self] result in
             switch result {
             case .success(let imageData):
                 self?.hdImageView.image = UIImage(data: imageData)

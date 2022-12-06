@@ -16,6 +16,7 @@
 		8E285549291ED81700B257FE /* AstronomyPicture .swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E285548291ED81700B257FE /* AstronomyPicture .swift */; };
 		8E63E4F9292A71BA0028899C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E63E4F8292A71BA0028899C /* NetworkManager.swift */; };
 		8E63E4FB292A779D0028899C /* HdImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E63E4FA292A779D0028899C /* HdImageViewController.swift */; };
+		8E63E4FE293D03410028899C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8E63E4FD293D03410028899C /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E63E4FE293D03410028899C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +94,9 @@
 			dependencies = (
 			);
 			name = AstronomyPictureOfTheDay;
+			packageProductDependencies = (
+				8E63E4FD293D03410028899C /* Alamofire */,
+			);
 			productName = AstronomyPictureOfTheDay;
 			productReference = 8E285530291EAFDC00B257FE /* AstronomyPictureOfTheDay.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 8E285527291EAFDC00B257FE;
+			packageReferences = (
+				8E63E4FC293D03410028899C /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 8E285531291EAFDC00B257FE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -376,6 +384,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E63E4FC293D03410028899C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E63E4FD293D03410028899C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E63E4FC293D03410028899C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8E285528291EAFDC00B257FE /* Project object */;
 }

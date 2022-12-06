@@ -11,5 +11,10 @@ struct AstronomyPicture: Decodable {
     let explanation: String
     let title: String
     let url: String
-    let hdurl: String
+    let hdurl: String?
+    
+    static func getData(from value: Any) -> AstronomyPicture {
+        guard let data = value as? AstronomyPicture else {return AstronomyPicture(date: "", copyright: "", explanation: "", title: "", url: "", hdurl: "")}
+        return data
+    }
 }

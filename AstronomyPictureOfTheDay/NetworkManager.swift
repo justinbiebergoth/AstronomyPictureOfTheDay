@@ -6,16 +6,13 @@
 //
 
 import Foundation
+import Alamofire
 
-enum NetworkError: Error {
-    case invalidURL
-    case noData
-    case decodingError
-}
 
 enum Link: String {
     case astronomyPictureInfoURL = "https://go-apod.herokuapp.com/apod"
     case hdImageURL = "https://go-apod.herokuapp.com/image"
+    case directUrl = "https://apod.nasa.gov/apod/image/2206/MarsFingers_Curiosity_1338.jpg"
 }
 
 class NetworkManager {
@@ -23,44 +20,32 @@ class NetworkManager {
     
     private init() {}
     
-    func fetchImage(from url: String?, completion: @escaping(Result<Data, NetworkError>) -> Void) {
-        guard let url = URL(string: url ?? "") else {
-            completion(.failure(.invalidURL))
-            return
-        }
-        DispatchQueue.global().async {
-            guard let imageData = try? Data(contentsOf: url) else {
-                completion(.failure(.noData))
-                return
+    func fetchData(from url: String, completion: @escaping(Result<AstronomyPicture, AFError>) -> Void) {
+        AF.request(url)
+            .validate()
+            .responseDecodable(of: AstronomyPicture.self) { dataResponse in
+                switch dataResponse.result {
+                case .success(let value):
+                    let astronomyPictureInfo = AstronomyPicture.getData(from: value)
+                    completion(.success(astronomyPictureInfo))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
             }
-            DispatchQueue.main.async {
-                completion(.success(imageData))
-            }
-        }
     }
     
-    func fetch<T: Decodable>(_ type: T.Type, from url: String?, completion: @escaping (Result<T, NetworkError>) -> Void) {
-        guard let url = URL(string: url ?? "") else {
-            completion(.failure(.invalidURL))
-            return
-        }
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data else {
-                completion(.failure(.noData))
-                print(error?.localizedDescription ?? "no error description")
-                return
-            }
-            
-            
-            do {
-                let type = try JSONDecoder().decode(T.self, from: data)
-                DispatchQueue.main.async {
-                    completion(.success(type))
+    func fetchImage(from url: String, completion: @escaping(Result<Data, AFError>) -> Void) {
+        AF.request(url)
+            .validate()
+            .responseData { dataResponse in
+                switch dataResponse.result {
+                case .success(let imageData):
+                    completion(.success(imageData))
+                case .failure(let error):
+                    completion(.failure(error))
                 }
-            } catch let error {
-                print(error.localizedDescription)
             }
-        }.resume()
-        
+       
     }
+    
 }
